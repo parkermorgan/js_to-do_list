@@ -1,0 +1,148 @@
+.modal {
+    margin: 100px;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #3b82f6;
+  color: white;
+}
+
+.modal-body {
+    margin: 50px;
+    padding: 2px 16px;
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+
+
+.modal-footer {
+  padding: 20px 16px;
+  background-color: #3b82f6;
+  color: white;
+}
+
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  box-shadow: 0 10px 8px 0 rgba(0,0,0,0.6),0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #EAF4FF;
+    text-align: center;
+}
+
+.button {
+    background-color: white;
+    min-width: 200px;
+    color: black;
+    font-size: 16px;
+    padding: 16px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid black
+}
+
+.smallButton {
+    padding: 10px;
+    min-width: 80px;
+    box-shadow: 0 5px 4px 0 rgba(0,0,0,0.6),0 5px 4px 0 rgba(0,0,0,0.19);
+    border: none;
+    background-color: #3b82f6;
+    color:white;
+}
+
+
+.button:hover {
+    background-color: black;
+    color: white;
+}
+
+.deleteBtn:hover {
+    background-color: red; 
+}
+
+.completeBtn:hover {
+    background-color: rgb(4, 167, 4);
+}
+
+#saveTaskButton {
+    min-width: 100px;
+}
+
+#modalTaskInput {
+    padding: 16px 30px;
+    max-width: 100px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size:16px;
+}
+
+#filterMenu {
+    background-color: #3b82f6;
+    min-width: 200px;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+#filterMenu:hover {
+    background-color: black;
+    color:white;
+}
+
+#container {
+    display:flex;
+    justify-content: center;
+    gap:10px;
+}
+
+.task-item {
+    background: #ffffff;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    max-width: 500px;  
+    width: 90%;       
+    margin-left: auto;  
+    margin-right: auto; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 3px 12px rgb(84, 84, 84);
+}
+
+.task-text {
+    text-align: left;
+    margin: 10px;
+    font-size: 18px;
+}

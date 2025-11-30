@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Parker Morgan">
+    <meta name="description" content="Parker Morgan's Task List">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <main>
+        <h1 class="header">Parker Morgan's To-Do List</h1>
+
+        <div id="container">
+            <button class="button" id="taskButton">Add Task</button>
+        
+            <select id="filterMenu">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="incomplete">Incomplete</option>
+            </select>
+
+            <button class="button" id="cleanButton">Clean Up</button>
+
+            </div>
+        
+            <div id="taskModal" class="modal" style="display:none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Add a Task</h2>
+                    </div>
+                    <div class="modal-body">
+                        <input id="modalTaskInput" type="text" placeholder="Task name">
+                        <button class="button" id="saveTaskButton">Save Task</button>
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button class="button" id="closeModalButton">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        
+            <h2>Current Tasks</h2>
+            <div id="taskList"></div>
+            
+            
+            <footer>
+                <div id="incompleteCount"></div>
+            </footer>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

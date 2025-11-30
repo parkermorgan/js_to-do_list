@@ -1,3 +1,4 @@
+// Main task array that holds all task objects
 let tasks = []
 
 const addButton = document.getElementById("taskButton");
@@ -11,6 +12,7 @@ const closeModalButton = document.getElementById("closeModalButton");
 const cleanButton = document.getElementById("cleanButton");
 let completeCount = document.getElementById("incompleteCount");
 
+// Load tasks from localStorage if they exist
 const savedTasks = localStorage.getItem("tasks");
 if (savedTasks) {
     tasks = JSON.parse(savedTasks);
@@ -18,6 +20,7 @@ if (savedTasks) {
 }
 
 function addTask(taskText) {
+    // Adds a new task and handles empty input errors
     try {
         if (taskText.trim() === "") {
             throw new Error("Task cannot be empty.");
@@ -36,15 +39,18 @@ function addTask(taskText) {
         console.error(error);
     }
 }
+// Removes a task based on its index
 function deleteTask(index) {
     tasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks));
     showTasks();
 }
 
+// Re-renders the task list and applies filtering + UI updates
 function showTasks() {
     taskList.innerHTML = "";
 
+    // Apply filter based on dropdown selection
     let filteredTasks = tasks;
 
     if (filterMenu.value === "completed") {
@@ -53,6 +59,7 @@ function showTasks() {
         filteredTasks = tasks.filter(task => !task.completed);
     }
 
+    // Build each task item in the DOM
     filteredTasks.forEach((task, index) => {
         const taskItem = document.createElement("div");
         taskItem.classList.add("task-item");
@@ -104,6 +111,7 @@ function showTasks() {
     }
 }
 
+// Recursive function that counts how many tasks are incomplete
 function countIncomplete(index = 0, count = 0) {
     if (index >= tasks.length) {
         return count;
@@ -116,6 +124,7 @@ function countIncomplete(index = 0, count = 0) {
     return countIncomplete(index + 1, count);
 }
 
+// Event listeners for modal actions and UI buttons
 addButton.addEventListener("click", function () {
     taskModal.style.display = "block";
 });

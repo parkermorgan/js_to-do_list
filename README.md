@@ -4,7 +4,7 @@ This project is a browser-based to-do list application built using JavaScript, H
 
 The purpose of this project was to deepen my understanding of client‑side JavaScript. I specifically focused on DOM manipulation, event handling, ES6 array methods, recursion, exception handling, and storing persistent data using `localStorage`. Most of my earlier web projects relied heavily on static pages or backend logic, so I wanted to create something that responds directly to user input in real time and showcases what JavaScript can do on the front end.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/uxtLfxENERA)
 
 # Development Environment
 
